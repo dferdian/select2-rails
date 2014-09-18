@@ -711,7 +711,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 .replace(/([.])/g, '_')
                 .replace(/([;&,\-\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
             this.container.attr("id", this.containerId);
-
+            this.container.attr("name", this.containerId);
             this.container.attr("title", opts.element.attr("title"));
 
             this.body = $("body");
