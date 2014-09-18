@@ -711,7 +711,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 .replace(/([.])/g, '_')
                 .replace(/([;&,\-\.\+\*\~':"\!\^#$%@\[\]\(\)=>\|])/g, '\\$1');
             this.container.attr("id", this.containerId);
-            this.container.attr("name", this.containerId);
+            
             this.container.attr("title", opts.element.attr("title"));
 
             this.body = $("body");
@@ -2094,6 +2094,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
             // rewrite labels from original element to focusser
             this.focusser.attr("id", "s2id_autogen"+idSuffix);
+            this.focusser.attr("name", "s2id_autogen"+idSuffix);
 
             elementLabel = $("label[for='" + this.opts.element.attr("id") + "']");
 
@@ -2682,6 +2683,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
             // rewrite labels from original element to focusser
             this.search.attr("id", "s2id_autogen"+nextUid());
+            this.search.attr("name", "s2id_autogen"+nextUid());
 
             this.search.prev()
                 .text($("label[for='" + this.opts.element.attr("id") + "']").text())
